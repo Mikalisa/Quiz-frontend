@@ -38,6 +38,7 @@ class QuestionView extends Component {
         this.setState({
           questions: result.questions
         })
+        alert(result)
         return;
       },
       error: (error) => {
