@@ -31,8 +31,9 @@ class QuestionView extends Component {
   
   getQuestions = () => {
     $.ajax({
-      url: `http://quizzeappp.herokuapp.com/questions?page=${this.state.page}`,
+      url: `https://quizzeappp.herokuapp.com/questions?page=${this.state.page}`,
       type: "GET",
+      dataType:"json",
       success: (result) => {
         this.setState({
           questions: result.questions
@@ -75,7 +76,7 @@ class QuestionView extends Component {
   sendSelectedButtonId = (id) => {
 
     $.ajax({
-      url: `http://quizzeappp.herokuapp.com/questions/${id}`,
+      url: `https://quizzeappp.herokuapp.com/questions/${id}`,
       type: "POST",
       dataType: 'json',
       contentType: 'application/json',
@@ -116,7 +117,7 @@ class QuestionView extends Component {
   userAction = (user) => {
     if (user != null) {
       $.ajax({
-        url: `http://quizzeappp.herokuapp.com/users/`, 
+        url: `https://quizzeappp.herokuapp.com/users/`, 
         type: "POST",
         dataType: 'json',
         contentType: 'application/json',
