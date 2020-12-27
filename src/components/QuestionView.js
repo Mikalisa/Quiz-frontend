@@ -82,7 +82,7 @@ class QuestionView extends Component {
       contentType: 'application/json',
 
       error: (error) => {
-        alert('Unable to load questions. Please try your request again')
+        //alert('Unable to load questions. Please try your request again')
         return;
       }
     })
@@ -128,7 +128,7 @@ class QuestionView extends Component {
         crossDomain: true,
 
         error: (error) => {
-          alert('Unable to load questions. Please try your request again')
+          //alert('Unable to load questions. Please try your request again')
           return;
         }
       })
